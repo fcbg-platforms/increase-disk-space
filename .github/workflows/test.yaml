@@ -19,7 +19,7 @@ jobs:
         shell: bash
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Check initial disk space
         run: |
           initial_space=$(df -h / | grep / | awk '{print $4}')
@@ -58,7 +58,7 @@ jobs:
         shell: bash
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Free disk space
         uses: ./
         with:
